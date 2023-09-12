@@ -1,8 +1,22 @@
+p {
+    margin:0;
+    /* background-color:#fff; */
+}
+
 .bluebox {
+    padding:10px;
     background-color: powderblue;
     color:blue;
     height:100px;
-    width:auto;
+    /* width:auto; */
+    width:100px;
+    /* border:10px ridge; */
+    /* border-width: 10px 5px 15px 5px; */
+    border-color: black green orange yellow;
+    border-width: 10px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-radius:80px;
 }
 
 .blue {
@@ -10,19 +24,30 @@
 }
 
 .greenbox {
+    padding:40px 70px;
     background-color: rgba(0, 128, 0, 0.3);
     color:green;
     height:100px;
+    background-origin: content-box;
     width:auto;
+    background-image:url(images/trees.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    outline-style: double;
+    outline-width: thick;
+    outline-color: red;
 }
 
 .yellowbox {
+    padding:10px 20px 10px 30px;
     background-color: darkkhaki;
     color:yellow;
     height:100px;
     width:auto;
+    margin:10px;
 }
 
 .great {
     font-size:300%;
 }
+
