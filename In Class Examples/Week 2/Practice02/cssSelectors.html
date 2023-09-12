@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Selectors</title>
+        <style> 
+            div ~ p {
+                background: yellow;
+            }
+
+            div[class~="test"] {
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Selectors: Elements</h1>
+        <div>First div
+        <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+        <p class="intro"> Paragraph inside div after List </p>
+        </div>
+
+
+        <div>Second div </div>
+        <p>Paragraph 1 after Div </p>
+        <p>Paragraph 2 after Div </p>
+
+
+        <div>Third div
+        <section> Section inside div
+        <p>Paragraph 1 inside section which is inside div</p>
+        <p>Paragraph 2 inside section which is inside div</p>
+        </section>
+        </div>
+
+
+        <h1>CSS Selectors: Attributes</h1>
+        <div class="first_test">The first div element: first_test</div>
+        <div class="second">The second div element: second</div>
+        <div class="test">The third div element: test</div>
+        <div class="test_ex">The fourth div element: test_ex</div>
+        <div class="tests">The fifth div element: tests</div>
+        <p class="test">This is a paragraph:  test</p>
+        <p class="test_ex">This is a paragraph: test_ex</p>
+
+    </body>
+</html>
