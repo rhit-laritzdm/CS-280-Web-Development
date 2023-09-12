@@ -1,5 +1,5 @@
 .bluebox {
-    background-color: blue;
+    background-color: powderblue;
     color:blue;
     height:100px;
     width:auto;
@@ -17,8 +17,12 @@
 }
 
 .yellowbox {
-    background-color: yellow;
+    background-color: darkkhaki;
     color:yellow;
     height:100px;
     width:auto;
+}
+
+.great {
+    font-size:300%;
 }
