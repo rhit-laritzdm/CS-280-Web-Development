@@ -1,0 +1,24 @@
+.bluebox {
+    background-color: blue;
+    color:blue;
+    height:100px;
+    width:auto;
+}
+
+.blue {
+    color:blue;
+}
+
+.greenbox {
+    background-color: rgba(0, 128, 0, 0.3);
+    color:green;
+    height:100px;
+    width:auto;
+}
+
+.yellowbox {
+    background-color: yellow;
+    color:yellow;
+    height:100px;
+    width:auto;
+}
