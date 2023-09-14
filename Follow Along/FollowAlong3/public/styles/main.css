@@ -1,3 +1,7 @@
 body {
     background: #FFFFFF;
 }
+
+.page-container {
+    margin-top: 75px;
+}
