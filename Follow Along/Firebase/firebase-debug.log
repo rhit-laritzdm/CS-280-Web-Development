@@ -1,0 +1,18 @@
+[debug] [2023-09-21T17:36:58.498Z] ----------------------------------------------------------------------
+[debug] [2023-09-21T17:36:58.501Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\laritzdm\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-09-21T17:36:58.502Z] CLI Version:   12.5.4
+[debug] [2023-09-21T17:36:58.502Z] Platform:      win32
+[debug] [2023-09-21T17:36:58.502Z] Node Version:  v18.17.1
+[debug] [2023-09-21T17:36:58.504Z] Time:          Thu Sep 21 2023 13:36:58 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-09-21T17:36:58.504Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-21T17:36:58.510Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[debug] [2023-09-21T17:36:58.696Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-09-21T17:36:58.697Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=801630622&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
