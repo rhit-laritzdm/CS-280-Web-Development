@@ -1,0 +1,13 @@
+main = function() {
+    console.log("Ready");
+    console.log(window.innerWidth)
+    screen();
+}
+
+function screen() {
+    width = window.innerWidth;
+    document.querySelector('#size').innerHTML
+     = 'width : ${width} px'
+}
+
+main();
