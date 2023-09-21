@@ -1,3 +1,5 @@
+window.onresize = screen;
+window.onload = screen;
 main = function() {
     console.log("Ready");
     console.log(window.innerWidth)
