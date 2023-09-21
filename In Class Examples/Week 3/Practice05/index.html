@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice05</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <script>
+            function myFunction() {
+              document.getElementById("demo4").innerHTML = "Paragraph changed.";
+            }
+            </script>
+    </head>
+    <body>
+        <p>The result of adding "5" + 2 + 3 is:</p>
+        <p id="demo10"></p>
+        <script>
+            let s = "5" + 2 + 3;
+            document.getElementById("demo10").innerHTML = s;
+        </script>
+
+        <p id="demo9"></p>
+
+        <script>
+        let lastName, lastname;
+        lastName = "Doe";
+        lastname = "Peterson";
+        let q;
+        q = (5 + 6) * 10;
+        var a, b;
+        a = 5 + 6;
+        b = a * 10;
+        document.getElementById("demo9").innerHTML = q;
+        </script>
+
+        <p id="demo8"></p>
+        <p id="demo7"></p>
+
+        <script>
+            let x, y, z;  // Statement 1
+            x = 5;        // Statement 2
+            y = 6;        // Statement 3
+            z = x + y;    // Statement 4
+
+            a = 5; b = 6; c = a + b;
+            console.log(c);
+            document.getElementById("demo7").innerHTML =
+            "The value of z is " + z + ".";  
+            document.getElementById("demo8").innerHTML = "How are you?";
+        </script>
+
+        <button onclick="window.print()">Print this page</button>
+
+        <button type="button" onclick="document.write(5 + 6)">Try it</button>
+
+        <p id="demo6"></p>
+        <script>
+        document.getElementById("demo6").innerHTML = 5 + 6;
+        </script>
+
+        <p id="demo5">A Paragraph.</p>
+        <button type="button" onclick="myFunction1()">Try it</button>
+
+        <p id="demo4">A Paragraph.</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+
+        <p id="demo3"></p>
+        <script>
+        document.getElementById("demo3").innerHTML = "My First JavaScript";
+        </script>
+
+        <p id="demo2" style="display:none">Hello JavaScript!</p>
+        <button type="button" onclick="document.getElementById('demo2').style.display='block'">Click Me!</button>
+
+        <p id="demo1">JavaScript can change the style of an HTML element.</p>
+        <button type="button" onclick="document.getElementById('demo1').style.fontSize='35px'">Click Me!</button>
+        
+        <p id="demo">JavaScript can change HTML content.</p>
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+        
+        
+        <script src="scripts/main.js"></script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>
