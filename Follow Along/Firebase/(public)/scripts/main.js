@@ -7,7 +7,7 @@ main = function() {
 function screen() {
     width = window.innerWidth;
     document.querySelector('#size').innerHTML
-     = 'width : ${width} px'
+     = `Width : ${width} px`
 }
 
 main();

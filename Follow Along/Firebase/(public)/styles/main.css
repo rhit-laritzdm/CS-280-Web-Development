@@ -28,4 +28,24 @@ body{
     color: rgb(22,19,19);
     font-size: 35px;
 }
+@media screen and (max-width : 1200px){
+    .container{
+        background-color: var(--color-4);
+    }
+}
+@media screen and (max-width : 768px){
+    .container{
+        background-color: var(--color-2);
+    }
+}
+@media screen and (max-width : 992px){
+    .container{
+        background-color: var(--color-3);
+    }
+}
+@media screen and (max-width : 500px){
+    .container{
+        background-color: var(--color-1);
+    }
+}
 
