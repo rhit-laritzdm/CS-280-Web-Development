@@ -1,5 +1,5 @@
 let counter = 0;
-let favoriteColor = 'Red';
+let favoriteColor = 'Blue';
 
 main = function() {
     console.log("Ready");

@@ -1,5 +1,6 @@
 body {
-    background: #FFFFFF;
+    background: #d3d3d3;
+    
 }
 
 .page-container {
@@ -10,14 +11,24 @@ body {
     background-color: maroon;
 }
 
+#favoriteColorContainer {
+    align-content: center;
+}
 #favoriteColorBox {
     background-color: blue;
+    font-family: consolas, arial, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    border-width: 2px;
+    border-radius: 5px;
 }
 
 .button-group {
     padding: 5vw;
     text-align: center;
-    /* border: gray solid 2px; */
 }
 
 .button-group > button {
@@ -25,6 +36,7 @@ body {
     margin: 10px;
     padding: 10px;
     background-color: maroon;
+    text-align: center;
 }
 
 #counterText {

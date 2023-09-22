@@ -9,7 +9,7 @@
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
         <link rel='stylesheet' href='styles/main.css'>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <title>Counter</title>
+        <title>My Favorite Things</title>
     </head>
     <body>
         <nav id="favoriteNavbar" class="navbar navbar-dark">
@@ -17,28 +17,44 @@
                 <a class="navbar-brand" href="#">Favorite Things</a>
             </div>
         </nav>
-        <div id="mainPage" class="container page-container">
+
+        <div id="mainPage" class="container-fluid page-container">
             <hr>
+
             <h2>Favorite Number:</h2>
             <div id="counterText" class="text-dark">0</div>
-            <div class="button-group">
-                <button id="decrementButton" type="button" class="btn btn-secondary">Decrement</button>
-                <button id="resetButton" type="button" class="btn btn-secondary">Reset</button>
-                <button id="incrementButton" type="button" class="btn btn-secondary">Increment</button>
+            <div class="button-group container-fluid">
+                <button id="decrementButton" type="button" class="btn btn-secondary col-md-2">Decrement</button>
+                <button id="resetButton" type="button" class="btn btn-secondary col-md-2">Reset</button>
+                <button id="incrementButton" type="button" class="btn btn-secondary col-md-2">Increment</button>
             </div>
 
             <hr>
+
             <h2>Favorite Color:</h2>
-            <div class="container color-container">
-                <div id = "favoriteColorBox" class="text-light">Blue</div>
-                <div class="button-group">
-                    <button id="blueButton" type="button" class="btn btn-secondary">Blue</button>
-                    <button id="greenButton" type="button" class="btn btn-secondary">Green</button>
-                    <button id="redButton" type="button" class="btn btn-secondary">Red</button>
-                    <button id="purpleButton" type="button" class="btn btn-secondary">Purple</button>
+            <div id="favoriteColorContainer" class="container-fluid">
+                <div id = "favoriteColorBox" class=" text-light">Blue</div>
+                <div class="button-group container-fluid overflow-hidden">
+                    <div class="row">
+                        <button id="blueButton" type="button" class="btn btn-secondary col-md-2">Blue</button>
+                        <button id="greenButton" type="button" class="btn btn-secondary col-md-2">Green</button>
+                        <button id="redButton" type="button" class="btn btn-secondary col-md-2">Red</button>
+                        <button id="purpleButton" type="button" class="btn btn-secondary col-md-2">Purple</button>
+                    </div>
                 </div>
             </div>
+
             <hr>
+            <div class="container overflow-hidden">
+                <div class="row gx-5">
+                  <div class="col">
+                   <div class="p-3 border bg-light">Custom column padding</div>
+                  </div>
+                  <div class="col">
+                    <div class="p-3 border bg-light">Custom column padding</div>
+                  </div>
+                </div>
+              </div>
         </div>
 
 
