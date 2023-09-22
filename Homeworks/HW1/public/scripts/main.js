@@ -1,8 +1,20 @@
 let counter = 0;
-let favoriteColor = 'red';
+let favoriteColor = 'Red';
 
 main = function() {
     console.log("Ready");
+    listenForCounters();
+    listenForColors();
+}
+
+updateView = function() {
+    document.querySelector('#counterText').innerHTML = `${counter}`
+    console.log(`Favorite Color: ${favoriteColor}`);
+    document.querySelector('#favoriteColorBox').style.backgroundColor = favoriteColor;
+    document.querySelector('#favoriteColorBox').innerHTML = favoriteColor;
+}
+
+listenForCounters = function() {
     document.querySelector("#decrementButton").onclick = (event) => {
         console.log("decrement button");
         counter = counter - 1;
@@ -20,9 +32,24 @@ main = function() {
     };
 }
 
-updateView = function() {
-    document.querySelector('#counterText').innerHTML = `${counter}`
-    document.querySelector('#favoriteColorText').innerHTML = `${favoriteColor}`
+listenForColors = function() {
+    document.querySelector("#blueButton").onclick = (event) => {
+        favoriteColor = "Blue";
+        updateView();
+    };
+    document.querySelector("#greenButton").onclick = (event) => {
+        favoriteColor = "Green";
+        updateView();
+    };
+    document.querySelector("#redButton").onclick = (event) => {
+        favoriteColor = "Red";
+        updateView();
+    };
+    document.querySelector("#purpleButton").onclick = (event) => {
+        favoriteColor = "Purple";
+        updateView();
+    };
 }
+
 
 main();
