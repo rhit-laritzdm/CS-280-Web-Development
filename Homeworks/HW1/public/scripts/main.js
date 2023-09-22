@@ -1,4 +1,5 @@
 let counter = 0;
+let favoriteColor = 'red';
 
 main = function() {
     console.log("Ready");
@@ -20,7 +21,8 @@ main = function() {
 }
 
 updateView = function() {
-    document.querySelector('#counterText').innerHTML = `Count = ${counter}`
+    document.querySelector('#counterText').innerHTML = `${counter}`
+    document.querySelector('#favoriteColorText').innerHTML = `${favoriteColor}`
 }
 
 main();

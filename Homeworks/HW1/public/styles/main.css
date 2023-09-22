@@ -9,13 +9,14 @@ body {
 .button-group {
     padding: 5vw;
     text-align: center;
-    border: gray solid 2px;
+    /* border: gray solid 2px; */
 }
 
 .button-group > button {
     font-size: 1.5em;
     margin: 10px;
     padding: 10px;
+    background-color: maroon;
 }
 
 #counterText {
@@ -23,4 +24,20 @@ body {
     font-family: consolas, arial, sans-serif;
     font-size: 4em;
     text-align: center;
+}
+
+#blueButton {
+    background-color: blue;
+}
+
+#greenButton {
+    background-color: green;
+}
+
+#redButton {
+    background-color: red;
+}
+
+#purpleButton {
+    background-color: purple;
 }
