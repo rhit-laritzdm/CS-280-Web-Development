@@ -11,10 +11,6 @@ body {
     background-color: maroon;
 }
 
-#favoriteColorContainer {
-/* Idk what should go here */
-}
-
 #favoriteColorBox {
     background-color: blue;
     width: 200px;
