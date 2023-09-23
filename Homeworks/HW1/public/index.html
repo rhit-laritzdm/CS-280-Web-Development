@@ -22,39 +22,40 @@
             <hr>
 
             <h2>Favorite Number:</h2>
-            <div id="counterText" class="text-dark">0</div>
-            <div class="button-group container-fluid">
-                <button id="decrementButton" type="button" class="btn btn-secondary col-md-2">Decrement</button>
-                <button id="resetButton" type="button" class="btn btn-secondary col-md-2">Reset</button>
-                <button id="incrementButton" type="button" class="btn btn-secondary col-md-2">Increment</button>
+            <p id="counterText" class="text-dark">0</p>
+            <div class="button-group row justify-content-center">
+                <button id="decrementButton" type="button" class="btn col-4 col-md-2">-1</button>
+                <button id="resetButton" type="button" class="btn col-4 col-md-2">Reset</button>
+                <button id="incrementButton" type="button" class="btn col-4 col-md-2">+1</button>
             </div>
 
             <hr>
 
             <h2>Favorite Color:</h2>
-            <div id="favoriteColorContainer" class="container-fluid">
-                <div id = "favoriteColorBox" class=" text-light">Blue</div>
-                <div class="button-group container-fluid overflow-hidden">
-                    <div class="row">
-                        <button id="blueButton" type="button" class="btn btn-secondary col-md-2">Blue</button>
-                        <button id="greenButton" type="button" class="btn btn-secondary col-md-2">Green</button>
-                        <button id="redButton" type="button" class="btn btn-secondary col-md-2">Red</button>
-                        <button id="purpleButton" type="button" class="btn btn-secondary col-md-2">Purple</button>
-                    </div>
+            <div id="favoriteColorContainer" class="container-fluid row justify-content-center">
+                <p id = "favoriteColorBox" class="text-light">Blue</p>
+                <div class="button-group row justify-content-center">
+                    <button id="blueButton" type="button" class="btn col-3 col-md-2">Blue</button>
+                    <button id="greenButton" type="button" class="btn col-3 col-md-2">Green</button>
+                    <button id="redButton" type="button" class="btn col-3 col-md-2">Red</button>
+                    <button id="purpleButton" type="button" class="btn col-3 col-md-2">Purple</button>
                 </div>
             </div>
-
-            <hr>
-            <div class="container overflow-hidden">
-                <div class="row gx-5">
-                  <div class="col">
-                   <div class="p-3 border bg-light">Custom column padding</div>
-                  </div>
-                  <div class="col">
-                    <div class="p-3 border bg-light">Custom column padding</div>
-                  </div>
+            <div class="row justify-content-center">
+                <div class="col-md-2 col-3">
+                    <button class="btn btn-primary btn-block">Button 1</button>
                 </div>
-              </div>
+                <div class="col-md-2 col-3">
+                    <button class="btn btn-secondary btn-block">Button 2</button>
+                </div>
+                <div class="col-md-2 col-3">
+                    <button class="btn btn-success btn-block">Button 3</button>
+                </div>
+                <div class="col-md-2 col-3">
+                    <button class="btn btn-danger btn-block">Button 4</button>
+                </div>
+            </div>
+            <hr>
         </div>
 
 

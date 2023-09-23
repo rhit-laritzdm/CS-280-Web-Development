@@ -12,16 +12,17 @@ body {
 }
 
 #favoriteColorContainer {
-    align-content: center;
+/* Idk what should go here */
 }
+
 #favoriteColorBox {
     background-color: blue;
+    width: 200px;
+    margin: 10px;
+    line-height: 100px;
+    text-align: center;
     font-family: consolas, arial, sans-serif;
     font-size: 2em;
-    text-align: center;
-    width: 200px;
-    height: 100px;
-    margin: 20px;
     border-width: 2px;
     border-radius: 5px;
 }
@@ -37,6 +38,7 @@ body {
     padding: 10px;
     background-color: maroon;
     text-align: center;
+    color: white;
 }
 
 #counterText {
