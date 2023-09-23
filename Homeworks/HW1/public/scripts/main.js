@@ -10,8 +10,8 @@ main = function() {
 updateView = function() {
     document.querySelector('#counterText').innerHTML = `${counter}`
     console.log(`Favorite Color: ${favoriteColor}`);
-    document.querySelector('#favoriteColorBox').style.backgroundColor = favoriteColor;
-    document.querySelector('#favoriteColorBox').innerHTML = favoriteColor;
+    document.querySelector('#favoriteColorBox').style.backgroundColor = `${favoriteColor}`;
+    document.querySelector('#favoriteColorBox').innerHTML = `${favoriteColor}`;
 }
 
 listenForCounters = function() {
