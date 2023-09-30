@@ -1,7 +1,7 @@
 const owl1 = "Hedwig";
-const owl1src = "/images/hedwig.png";
+const owl1src = "./images/hedwig.png";
 const owl2 = "Pigwidgeon";
-const owl2src = "/images/pigwidgeon.png";
+const owl2src = "./images/pigwidgeon.png";
 let currentOwl = owl1;
 console.log("Script Loaded");
 main = function() {
