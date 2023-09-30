@@ -1,3 +1,23 @@
 body {
-    font-family: ''
+    font-family: 'Milonga', serif;
+    font-size: 1.5em;
+}
+
+.card {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.card-body {
+    padding: 0;
+}
+.card img {
+    width: 100%;
+}
+
+footer {
+    margin-top: 10px;
+}
+.img-responsive {
+    width: 80%;
 }

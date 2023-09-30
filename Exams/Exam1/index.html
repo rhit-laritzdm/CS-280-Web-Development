@@ -9,19 +9,64 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
     <link rel='stylesheet' href='styles/main.css'>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Media</title>
+    <title>Responsive Portfolio</title>
 
   </head>
   <body>
-    <div class = "container">
-      <div class="text">
-        Hello Screen !
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <div class="container-fluid justify-content-center justify-content-sm-start">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
       </div>
-      <div id="size">Width</div>
-    </div>
+    </nav>
 
+    <!-- Main -->
+    <main id="mainPage" class="container-fluid page-container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="text-center">Hedwig</h1>
+            </div>
+            <img class="card-img-bottom" src="images/hedwig.png" alt="Card Image">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 text-center">
+          <div class="container-fluid">
+            <p>We provide a mail and commercial services for Hogwarts.</p>
+          </div>
+          <button type="button" class="btn btn-primary text-center" id="owlSelector">Select Owl</button>
+        </div>
+      </div>      
+    </main>
 
-
+    <!-- Footer -->
+    <footer class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-3 col-sm-2 col-md-1 text-center">
+          <img class="img-responsive" src="images/instagram.png" alt="Instagram Logo">
+        </div>
+        <div class="col-3 col-sm-2 col-md-1  text-center">
+          <img class="img-responsive" src="images/x-logo.png" alt="X Logo">
+        </div>
+        <div class="col-3 col-sm-2 col-md-1 text-center">
+          <img class="img-responsive" src="images/dribbble-logo.png" alt="Dribble Logo">
+        </div>
+        <div class="col-3 col-sm-2 col-md-1 text-center">
+          <img class="img-responsive" src="images/behance.png" alt="Behance Logo">
+        </div>
+      </div>
+    </footer>
 
     <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
