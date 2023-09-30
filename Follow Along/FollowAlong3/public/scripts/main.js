@@ -1,26 +1,23 @@
-let counter = 0;
+const owl1 = "Hedwig";
+const owl2 = "Pidwidgeon";
+let currentOwl = owl1;
 
 main = function() {
     console.log("Ready");
-    document.querySelector("#decrementButton").onclick = (event) => {
-        console.log("decrement button");
-        counter = counter - 1;
-        updateView();
-    };
-    document.querySelector("#resetButton").onclick = (event) => {
-        console.log("reset button");
-        counter = 0;
-        updateView();
-    };
-    document.querySelector("#incrementButton").onclick = (event) => {
-        console.log("increment button");
-        counter = counter + 1;
-        updateView();
+    document.querySelector("#owlSelector").onclick = (event) => {
+        console.log("Select Owl Button");
+        switchOwl();
     };
 }
 
-updateView = function() {
-    document.querySelector('#counterText').innerHTML = `Count = ${counter}`
+switchOwl = function() {
+    if (currentOwl==owl1) {
+        document.getElementById('#owlName').innerHTML = owl2;
+        document.getElementById('#owlPicture').innerHTML = `images/${owl2}.png`;
+    } else {
+        document.getElementById('#owlName').innerHTML = owl1;
+        document.getElementById('#owlPicture').innerHTML = `images/${owl1}.png`;
+    }
 }
 
 main();
