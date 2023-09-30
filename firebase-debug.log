@@ -1,0 +1,21 @@
+[debug] [2023-09-30T22:36:00.338Z] ----------------------------------------------------------------------
+[debug] [2023-09-30T22:36:00.340Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\laritzdm\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-09-30T22:36:00.340Z] CLI Version:   12.5.4
+[debug] [2023-09-30T22:36:00.340Z] Platform:      win32
+[debug] [2023-09-30T22:36:00.340Z] Node Version:  v18.17.1
+[debug] [2023-09-30T22:36:00.341Z] Time:          Sat Sep 30 2023 18:36:00 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-09-30T22:36:00.341Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-30T22:36:00.350Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-30T22:36:00.351Z] > authorizing via signed-in user (daniellaritz94@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\laritzdm\OneDrive - Rose-Hulman Institute of Technology\Documents\Fall Quarter 2023\CS 280 Web Development
+
