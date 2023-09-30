@@ -4,7 +4,7 @@ let currentOwl = owl1;
 
 main = function() {
     console.log("Ready");
-    document.querySelector("#owlSelector").onclick = (event) => {
+    document.getElementById("#owlSelector").onclick = (event) => {
         console.log("Select Owl Button");
         switchOwl();
     };
