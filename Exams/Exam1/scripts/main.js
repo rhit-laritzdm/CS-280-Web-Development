@@ -1,5 +1,5 @@
 const owl1 = "Hedwig";
-const owl2 = "Pidwidgeon";
+const owl2 = "Pigwidgeon";
 let currentOwl = owl1;
 console.log("Script Loaded");
 main = function() {
