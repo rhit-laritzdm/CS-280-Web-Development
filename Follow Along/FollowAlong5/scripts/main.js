@@ -1,26 +1,35 @@
-let counter = 0;
+const turn = document.getElementById("turn");
+const boxes = document.querySelectorAll("#main div");
+let X_or_O = 0;
 
-main = function() {
-    console.log("Ready");
-    document.querySelector("#decrementButton").onclick = (event) => {
-        console.log("decrement button");
-        counter = counter - 1;
-        updateView();
-    };
-    document.querySelector("#resetButton").onclick = (event) => {
-        console.log("reset button");
-        counter = 0;
-        updateView();
-    };
-    document.querySelector("#incrementButton").onclick = (event) => {
-        console.log("increment button");
-        counter = counter + 1;
-        updateView();
-    };
-}
+function main() {
+    boxes.forEach((box) => {
+        box.addEventListener("click", handleBoxClick);
+    });
+    document.getElementById("replay").addEventListener("click", replay);
+    turn.innerHTML = "Play";
+    turn.style.fontSize = "25px";
+};
 
-updateView = function() {
-    document.querySelector('#counterText').innerHTML = `Count = ${counter}`
-}
+// Function to select and display the winner
+function selectWinnerBoxes(winnerBoxes) {
+
+};
+
+// Function to check and get the winner
+function getWinner() {
+
+};
+
+// Function to handle box clicks
+function handleBoxClick() {
+    
+
+};
+
+// Function to reset the game
+function replay() {
+
+};
 
 main();
