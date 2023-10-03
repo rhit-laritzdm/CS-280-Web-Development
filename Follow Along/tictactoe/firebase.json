@@ -1,10 +1,22 @@
 {
-  "hosting": {
+  "hosting": [
+    { "target": "01",
     "public": "tictactoe01/public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+
+  { "target": "02",
+    "public": "tictactoe02/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
+]
+
 }
