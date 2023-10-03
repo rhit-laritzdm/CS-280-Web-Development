@@ -42,3 +42,8 @@
     margin: 40px auto;
     box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
 }
+
+.win {
+    background: #48ceff;
+    color: rgb(0, 94, 255);
+}
