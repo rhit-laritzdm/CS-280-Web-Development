@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "many-tic-tac-toe-e56b9"
-  }
+  },
+  "targets": {
+    "many-tic-tac-toe-e56b9": {
+      "hosting": {
+        "01": [
+          "many-tic-tac-toe-e56b9"
+        ],
+        "02": [
+          "tictactoe2-laritzdm"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
