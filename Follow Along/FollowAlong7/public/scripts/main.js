@@ -56,6 +56,8 @@ const carView = {
         this.carNameElem = document.getElementById('car-name');
         this.carImageElem = document.getElementById('car-img');
         this.countElem = document.getElementById('car-count');
+        // on click increment counter
+        this.carImageElem.addEventListener('click', this.clickHandler);
 
         this.render();
     },
