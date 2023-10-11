@@ -42,7 +42,7 @@ const carController = {
         carModel.currentCar = car;
     },
 
-    incrementConter() {
+    incrementCounter() {
         carModel.currentCar.clickCount++;
         console.log(carModel.currentCar.clickCount);
         carView.render();
