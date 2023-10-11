@@ -1,6 +1,7 @@
 // Define base image path
 const IMG_PATH = 'img/';
 
+// Class for creating car objects
 class Car {
     constructor(name, imgSrc) {
         this.clickCount = 0;
@@ -9,6 +10,7 @@ class Car {
     }
 }
 
+// Model
 const carModel = {
     currentCar: null,
     cars: [
@@ -20,6 +22,7 @@ const carModel = {
     ]
 };
 
+// Controller
 const carController = {
     init() {
         carModel.currentCar = carModel.cars[0];
@@ -46,12 +49,14 @@ const carController = {
     }
 };
 
+// Car View
 const carView = {
     init() {
         this.carElem = document.getElementById('car');
         this.carNameElem = document.getElementById('car-name');
         this.carImageElem = document.getElementById('car-img');
         this.countElem = document.getElementById('car-count');
+
         this.render();
     },
 
@@ -68,6 +73,7 @@ const carView = {
     },
 };
 
+// Car List View
 const carListView = {
     init() {
         this.carListElem = document.getElementById('car-list');
