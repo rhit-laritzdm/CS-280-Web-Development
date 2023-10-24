@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     // Ensure modal and its backdrop are dismissed
                     $("#dataIndexModal").modal('hide');
                     $('body').removeClass('modal-open');
-                    $('modal-backdrop').remove();
+                    $('.modal-backdrop').remove();
                 });
         };
     });
+
 });
