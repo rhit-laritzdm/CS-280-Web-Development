@@ -19,6 +19,7 @@
     
     <!-- Button to open modal -->
     <div id="mainPage" class="container page-container">
+      <h2>Chuck Norris Joke Generator:</h2>
         <button id="fab" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dataIndexModal">
             <i class="material-symbols-outlined">
                 add
@@ -29,22 +30,33 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Enter Data Index</h5>
+                        <h5 class="modal-title">Generate Random Chuck Norris Joke?</h5>
                     </div>
                     <div class="modal-body">
-                        <input type="number" id="dataIndexInput" class="form-control" placeholder="Enter a number">
+                        <p>Chuck Norris jokes are really funny, you should try it!</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="fetchDataButton">Fetch Data</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" id="fetchDataButton">Yes</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Display area for fetched data -->
-    <div id="dataDisplay" class="mt-5 ml-5"></div>
+    <!-- Table to display the data -->
+    <table class="table mt-4" id="dataTable">
+        <thead>
+            <tr>
+                <!-- Headers will be filled dynamically -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Data will be filled dynamically -->
+            </tr>
+        </tbody>
+    </table>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js' integrity='sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A==' crossorigin='anonymous'></script>
