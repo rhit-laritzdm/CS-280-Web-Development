@@ -63,6 +63,34 @@ const bookParsed = JSON.parse(bookJSON);
 // console.log(bookParsed.title);
 // output: Ego is the enemy
 
+// const fs = require('fs');
+// fs.writeFileSync('1-json.json', bookJSON);
+// const dataBuffer = fs.readFileSync('1-json.json'); 
+// const dataJSON = dataBuffer.toString();
+// console.log(dataJSON);
+// output: {"title":"Ego is the enemy","author":"Ryan Holiday"} // JSON
+// const data = JSON.parse(dataBuffer);
+// console.log(data);
+// output: { title: 'Ego is the enemy', author: 'Ryan Holiday' } // JS object
+// console.log(dataBuffer);
+
+const fs = require('fs')
+const dataBuffer = fs.readFileSync('data.json');
+const dataJSON = dataBuffer.toString();
+const data = JSON.parse(dataJSON);
+console.log(data.name, data.city)
+data.name = "Daniel";
+data.city = "Cincinnati";
+const updateDataJSON = JSON.stringify(data)
+fs.writeFileSync('data.json', updateDataJSON)
+
+
+
+
+
+
+
+
 // console.log(msg)
 // const greenMsg = chalk.green.bold(msg);
 // console.log(greenMsg);
