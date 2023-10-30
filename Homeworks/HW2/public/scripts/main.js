@@ -4,26 +4,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const clientTestimonial = document.getElementById("clientTestimonial");
     const anotherTestimonialButton = document.getElementById("anotherTestimonialButton");
 
-    fetchDataButton.addEventListener("click", function() {
-        const dataIndex = dataIndexInput.value;
-        if (dataIndex) {
-            fetch(`https://jsonplaceholder.typicode.com/todos/${dataIndex}`)
-                .then(response => response.json())
-                .then(data => {
-                    dataDisplay.innerHTML = `<strong>Title:</strong> ${data.title} <br> <strong>Completed:</strong> ${data.completed}`;
-                    $("#dataIndexModal").modal('hide');
-                })
-                .catch(error => {
-                    console.error("Error fetching data: ", error);
-                    dataDisplay.innerHTML = "Error fetching data. Please try again.";
-                })
-                .finally(() => {
-                    // Ensure modal and its backdrop are dismissed
-                    $("#dataIndexModal").modal('hide');
-                    $('body').removeClass('modal-open');
-                    $('.modal-backdrop').remove();
-                });
-        };
+    anotherTestimonialButton.addEventListener("click", function() {
+        fetch("https://64486933e7eb3378ca2e0f51.mockapi.io/api/users")
+            .then(response => response.json())
+            .then(data => {
+                dataDisplay.innerHTML = `<strong>Title:</strong> ${data.title} <br> <strong>Completed:</strong> ${data.completed}`;
+                $("#dataIndexModal").modal('hide');
+            })
+            .catch(error => {
+                console.error("Error fetching data: ", error);
+                dataDisplay.innerHTML = "Error fetching data. Please try again.";
+            })
+            .finally(() => {
+                // Ensure modal and its backdrop are dismissed
+                $("#dataIndexModal").modal('hide');
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();
+            });
     });
 });
 
