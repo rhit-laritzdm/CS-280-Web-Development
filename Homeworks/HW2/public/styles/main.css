@@ -1,0 +1,69 @@
+body {
+    background: #d3d3d3;
+    
+}
+
+.page-container {
+    margin-top: 25px;
+}
+
+#favoriteNavbar {
+    background-color: maroon;
+}
+
+#favoriteColorBox {
+    background-color: blue;
+    width: 200px;
+    margin: 10px;
+    line-height: 100px;
+    text-align: center;
+    font-family: consolas, arial, sans-serif;
+    font-size: 1.5em;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group button {
+    font-size: 1.5em;
+    background-color: maroon;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+
+#buttonGroup1 button {
+    margin: 10px;
+}
+
+#buttonGroup2 div {
+    padding: 2px;
+
+}
+
+#counterText {
+    color: black;
+    font-family: consolas, arial, sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+
+#blueButton {
+    background-color: blue;
+}
+
+#greenButton {
+    background-color: green;
+}
+
+#redButton {
+    background-color: red;
+}
+
+#purpleButton {
+    background-color: purple;
+}
