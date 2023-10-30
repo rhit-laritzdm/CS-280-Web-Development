@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to left, #a25fff, #e6e2ed);
+    background: linear-gradient(to left, #0ca943, #94feb2);
     font-family: Arial, sans-serif;
 }
 
@@ -8,5 +8,10 @@ body {
 }
 
 #favoriteNavbar {
-    background-color: purple;
+    background-color: green;
+}
+
+#anotherTestimonial {
+    background-color: rgb(17, 108, 61);
+    color: white;
 }
