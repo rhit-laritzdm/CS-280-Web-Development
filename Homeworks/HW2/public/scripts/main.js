@@ -1,66 +1,69 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const clientImage = document.getElementById("clientImage");
-    const clientName = document.getElementById("clientName");
-    const clientTestimonial = document.getElementById("clientTestimonial");
-    const anotherTestimonialButton = document.getElementById("anotherTestimonialButton");
+const clientImage = document.getElementById("clientImage");
+const clientName = document.getElementById("clientName");
+const clientTestimonial = document.getElementById("clientTestimonial");
+const anotherTestimonialButton = document.getElementById("anotherTestimonialButton");
 
+updateClient();
+
+document.addEventListener('DOMContentLoaded', (event) => {
     anotherTestimonialButton.addEventListener("click", function() {
-        fetch("https://64486933e7eb3378ca2e0f51.mockapi.io/api/users")
-            .then(response => response.json())
-            .then(data => {
-                dataDisplay.innerHTML = `<strong>Title:</strong> ${data.title} <br> <strong>Completed:</strong> ${data.completed}`;
-                $("#dataIndexModal").modal('hide');
-            })
-            .catch(error => {
-                console.error("Error fetching data: ", error);
-                dataDisplay.innerHTML = "Error fetching data. Please try again.";
-            })
-            .finally(() => {
-                // Ensure modal and its backdrop are dismissed
-                $("#dataIndexModal").modal('hide');
-                $('body').removeClass('modal-open');
-                $('.modal-backdrop').remove();
-            });
+        updateClient();
     });
 });
 
 // Provided funciton to create random number for API ids
 function getRandomInt() {
+    return Math.floor(Math.random() * 10);
     // return a random number between 1 and 8 - we only have 8 API messages
 }
 
-//TODO: Remove previous HTML content from the card text. The content should be ""
+// Remove previous HTML content from the card text. The content should be ""
 function clearText() {
-    // Your code
+    clientImage.src = "";
+    clientName.innerHTML = "";
+    clientTestimonial.innerHTML = "";
 }
 
-// TODO: replace period by exclamation signs, add a new line, return processed text
+// replace period by exclamation signs, add a new line, return processed text
 function processText(text) {
-    // Your Code
+    const regex = /!!! /g;
+    return text.replaceAll('.', '!!!').replaceAll(regex, '$&\n');
 }
 
-// TODO: split text by a new line, create an array of sentences, return array
+// split text by a new line, create an array of sentences, return array
 function textToArray(text) {
-    // Your Code
+    const textArray = text.split("\n");
+    console.log(textArray);
+    return textArray;
 }
 
-// TODO: create for loop over text array. Append span tag and update code
+// create for loop over text array. Append span tag and update code
 function appendText(textArray) {
-    // Your Code
+    let text = "";
+    for (let i = 0; i < textArray.length; i++) {
+        text += '<span style="display:block">' + textArray[i] + '</span>';
+    };
+    return text;
 }
 
 function updateClient() {
     let id = getRandomInt() // https://developer.mozilla.org/en-US/docs/Web/API/fetch
 
-    clearText();
-    // Part 1. First just replace card title, card text and card image with new content
-
-    // Part 2. Text processing steps - processText, textToArray, appendText
-
-    // text = processText(text);
-
-    // text = textToArray(text);
-
-    // appendText(text);
-
-}
+    fetch(`https://64486933e7eb3378ca2e0f51.mockapi.io/api/users?id=${id}`)
+            .then(response => response.json())
+            .then(data => {
+                data = data[0];
+                clearText();
+                clientImage.src = data.avatar;
+                clientName.innerHTML = data.name;
+                clientTestimonial.innerHTML = data.message;
+                text = processText(data.message);
+                text = textToArray(text);
+                clientTestimonial.innerHTML = appendText(text);
+            })
+            .catch(error => {
+                console.error("Error fetching data: ", error);
+                clientTestimonial.innerHTML = "Error fetching data. Please try again.";
+                clientName.innerHTML = "Error fetching data. Please try again.";
+            });
+};
