@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(to right, #098936, #94feb2);
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    margin-top: 25px;
+}
+
+#favoriteNavbar {
+    background-color: green;
+}
+
+a.btn {
+    background-color: rgb(17, 108, 61);
+    color: white;
+}
+
+/* Remove padding and border next to images */
+div.card {
+    padding:0px;
+    border:0px;
+}
