@@ -15,3 +15,8 @@ a.btn {
     background-color: rgb(17, 108, 61);
     color: white;
 }
+
+/* Remove padding next to images */
+div.card {
+    padding:0px;
+}

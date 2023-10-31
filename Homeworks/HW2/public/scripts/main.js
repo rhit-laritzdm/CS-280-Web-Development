@@ -41,7 +41,7 @@ function textToArray(text) {
 function appendText(textArray) {
     let text = "";
     for (let i = 0; i < textArray.length; i++) {
-        text += '<span style="display:block">' + textArray[i] + '</span>';
+        text += '<span style="display:block;">' + textArray[i] + '</span>';
     };
     return text;
 }
