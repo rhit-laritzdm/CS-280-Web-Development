@@ -43,3 +43,31 @@ app.post('/books', async (req, res) => {
     await writeBooks(books);
     res.status(201).json(newBook);
 });
+
+app.put('/books/:id', async (req, res) => {
+    const { title, author } = req.body;
+    const { id } = req.params;
+    const books = await readBooks();
+    const book = books.find(book => book.id === parseInt(id, 10));
+    if (!book) {
+        return res.status(404).json({ error: 'Book not found' });
+    }
+    book.title = title || book.title;
+    book.author = author || book.author;
+
+    await writeBooks(books);
+    res.json(book);
+});
+
+app.delete('/books/:id', async (req, res) => {
+    const { id } = req.params;
+    const books = await readBooks();
+    const initialLength = books.length;
+    const remainingBooks = books.filter(book => book.id !== parseInt(id, 10));
+
+    if (remainingBooks.length === initialLength) {
+        return res.status(404).json({ error: 'Book not found' });
+    }
+    await writeBooks(remainingBooks);
+    res.json({ message: 'Book successfully deleted' });
+});
