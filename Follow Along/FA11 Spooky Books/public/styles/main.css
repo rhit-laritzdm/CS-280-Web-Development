@@ -1,23 +1,27 @@
 body {
-    background: linear-gradient(to right, #098936, #94feb2);
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-image: url('spookyImage.jfif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #af1111;
+    text-align: center;
+    margin: 20px;
 }
 
-.page-container {
-    margin-top: 25px;
+h1 {
+    text-align: center;
 }
 
-#favoriteNavbar {
-    background-color: green;
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-a.btn {
-    background-color: rgb(17, 108, 61);
-    color: white;
-}
-
-/* Remove padding and border next to images */
-div.card {
-    padding:0px;
-    border:0px;
+.book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
 }
