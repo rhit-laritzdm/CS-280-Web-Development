@@ -33,3 +33,13 @@ app.get('/books', async (req, res) => {
     const books = await readBooks();
     res.json(books);
 });
+
+app.post('/books', async (req, res) => {
+    const { title, author } = req.body;
+    const books = await readBooks();
+    const newId = books.length > 0 ? Math.max(...books.map(book => book.id)) + 1 : 1;
+    const newBook = { id: newId, title, author };
+    books.push(newBook);
+    await writeBooks(books);
+    res.status(201).json(newBook);
+});
