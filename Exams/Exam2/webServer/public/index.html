@@ -8,20 +8,39 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css' integrity='sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g==' crossorigin='anonymous'/> 
     <link rel='stylesheet' href="styles/main.css">
     <link rel = "icon" type = "image/x-icon" href="favicon.ico">
-    <title>RESTful API Demo</title>
+    <title>Shuffling Months</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark" id="monthsNav">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">API</a>
+        <a class="navbar-brand" href="#">Months</a>
       </div>
     </nav>
     
     <div id="mainPage" class="container page-container">
-      <div class="button-group">
-        <button id="fetchData" type="button" class="btn btn-primary">Fetch Data</button>
+      <div class="row input-group justify-content-center">
+        <div class="col-4">
+          <h2 class="input-label">From Index:</h2>
+          <input id="fromIndexInput" class="input-box" placeholder="From Index">
+        </div>
+        <div class="col-4">
+          <h2 class="input-label">To Index:</h2>
+          <input id="toIndexInput" class="input-box" placeholder="To Index">
+        </div>       
       </div>
-      <div id="dataContainer"></div>
+      <div class="row button-group justify-content-center text-center">
+        <div class="col-4">
+          <button id="moveButton" type="button" class="btn btn-primary">Move</button>
+        </div>
+        <div class="col-4">
+          <button id="resetButton" type="button" class="btn btn-primary">Reset</button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <ol class="col-4" id="monthList" start="0">
+          <!-- Months will get put here by API -->
+        </ol>
+      </div>
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js' integrity='sha512-ToL6UYWePxjhDQKNioSi4AyJ5KkRxY+F1+Fi7Jgh0Hp5Kk2/s8FD7zusJDdonfe5B00Qw+B8taXxF6CFLnqNCw==' crossorigin='anonymous'></script>

@@ -3,10 +3,25 @@ body {
     text-align: center;
 }
 
+#monthsNav {
+    background-color: rgb(96, 30, 157);
+}
+
 #dataContainer {
     margin-top: 70px;
 }
 
 .page-container {
     margin-top: 75px;
+}
+
+.input-label {
+    font-size: 14px;
+    color: gray;
+    text-align: left;
+}
+
+.row {
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
