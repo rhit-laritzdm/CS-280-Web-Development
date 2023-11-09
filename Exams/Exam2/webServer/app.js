@@ -3,33 +3,23 @@ const app = express();
 app.use('/', express.static("public"));
 app.use('/api/', express.json());
 
-let data = {};
-// let data = [];  // or an empty array depending on the instructions for your specific exam
-
 const fs = require("fs");
 const serverSideStorage = "../data/db.json";
-  
-function readFromServer() {
-    try {
-        const data = fs.readFile(serverSideStorage, 'utf-8');
-        return JSON.parse(data);
-    } catch (error) {
-        console.error('Error reading books:', error);
-        return [];
-    }
+
+// Reads data from file
+function readData() {
+    const buffer = fs.readFileSync(serverSideStorage, function (err, buf) {
+        if (err) {
+            console.log("error: ", err);
+        } else {
+            console.log("Data read successfully!");
+        }});
+    return JSON.parse(buffer.toString());
 }
 
-// fs.readFile(serverSideStorage, function (err, buf) {
-//     if (err) {
-//         console.log("error: ", err);
-//     } else {
-//         data = JSON.parse(buf.toString());
-//     }
-//     console.log("Data read from file.");
-// });
-
-function saveToServer(data) {
-    fs.writeFile(serverSideStorage, JSON.stringify(data), function (err, buf) {
+// Writes data to file
+function writeData(data) {
+    fs.writeFileSync(serverSideStorage, JSON.stringify(data), function (err, buf) {
         if (err) {
             console.log("error: ", err);
         } else {
@@ -38,9 +28,12 @@ function saveToServer(data) {
     })
 }
 
-// TODO: Create your backend API here:
-app.listen(3000);
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
 
+// TODO: Create your backend API here:
 /**
  * Get Months	- Gets the array of months in order
  *   method:                    GET
@@ -50,7 +43,7 @@ app.listen(3000);
  *   example response:          ["January","February","March","April","May","June","July","August","September","October","November","December"]
  */
 app.get('/api/getmonths', async (req, res) => {
-    res.json(readFromServer());
+    res.json(readData());
 });
 
 /**
@@ -65,9 +58,9 @@ app.get('/api/getmonths', async (req, res) => {
  *                               "to_index": 1}
 */
 app.put('/api/move/:fromindex/:toindex', async (req, res) => {
-    
+    // Retrieves data and extracts array of months
     const { fromindex, toindex } = req.params;
-    const data = readFromServer();
+    let data = readData();
     const months = data.months;
 
     // Swap positions of two months in array
@@ -76,9 +69,9 @@ app.put('/api/move/:fromindex/:toindex', async (req, res) => {
     months[toindex] = moved_month;
 
     // Save to server and return response
-    data = { months: months};
+    data = { months: months };
     const objectToReturn = { months: months, moved_month: moved_month, from_index: fromindex, to_index: toindex};
-    saveToServer(monthsList);
+    writeData(data);
     res.json(objectToReturn);
 });
 
@@ -92,7 +85,8 @@ app.put('/api/move/:fromindex/:toindex', async (req, res) => {
  */
 app.post('/api/setmonths', async (req, res) => {
     const {months} = req.body;
-    const monthsList = { months: months};
-    saveToServer(monthsList);
-    res.json(monthsList);
+    const data = { months: months};
+    await writeData(data);
+    // writeData(data);
+    res.json(data);
 });
